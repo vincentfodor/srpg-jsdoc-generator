@@ -6,7 +6,8 @@
     "author": "Vincent Fodor",
     "license": "MIT",
     "scripts": {
-        "start": "webpack --watch"
+        "build": "webpack",
+        "start": "webpack && node ./dist/bundle.js"
     },
     "dependencies": {
         "bluebird": "^3.7.2",
