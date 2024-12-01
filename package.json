@@ -1,0 +1,24 @@
+{
+    "name": "srpg-jsdoc-generator",
+    "version": "0.0.1",
+    "description": "A JSDoc generator for the SRPG Studio API",
+    "main": "index.js",
+    "author": "Vincent Fodor",
+    "license": "MIT",
+    "scripts": {
+        "start": "webpack --watch"
+    },
+    "dependencies": {
+        "bluebird": "^3.7.2",
+        "jsdom": "^25.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.26.0",
+        "@babel/preset-env": "^7.26.0",
+        "babel-loader": "^9.2.1",
+        "webpack": "^5.96.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^5.1.0",
+        "webpack-node-externals": "^3.0.0"
+    }
+}
