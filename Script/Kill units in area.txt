@@ -1,0 +1,31 @@
+(function(){
+
+	var list = PlayerList.getSortieList();
+	var i, death;
+	var count = list.getCount();
+	var generator = root.getEventGenerator();
+	var anime = root.queryAnime('easydamage');
+	var xStart = 8;
+	var xEnd = 18;
+	var yStart = 6;
+	var yEnd = 13;
+	
+	for (i = 0; i < count; i++) {
+		death = false;
+		unit = list.getData(i);
+		unitX = unit.getMapX();
+		unitY = unit.getMapY();
+		
+		if (unitX < xStart || unitX > xEnd || unitY < yStart || unitY > yEnd) {
+			death = true;
+		}
+		if ((unitX === xStart && unitY === yStart) || (unitX === xStart && unitY === yEnd) || (unitX === xEnd && unitY === yStart) || (unitX === xEnd && unitY === yEnd)) {
+			death = true;
+		}
+		
+		if (death === true) {
+			generator.damageHit(unit, anime, 99, DamageType.FIXED, unit, true);
+		}
+	}
+
+})();
