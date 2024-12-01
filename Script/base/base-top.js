@@ -146,21 +146,18 @@ var createPos = function (x, y) {
     return obj;
 };
 
-var defineObject = function (o) {
-    var F, n, i, len;
-    var prop = 0;
-
-    F = function () {};
-    F.prototype = o;
-    n = new F();
-
-    for (i = 1, len = arguments.length; i < len; ++i) {
-        for (prop in arguments[i]) {
-            n[prop] = arguments[i][prop];
-        }
-    }
-
-    return n;
+/**
+ * @template T1
+ * @template T2
+ * @param {T1} [obj1={}]
+ * @param {T2} [obj2={}]
+ * @returns {T1 & T2}
+ */
+const defineObject = (obj1 = {}, obj2 = {}) => {
+    return {
+        ...obj1,
+        ...obj2,
+    };
 };
 
 var BaseObject = {
