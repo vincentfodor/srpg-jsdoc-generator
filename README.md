@@ -9,7 +9,7 @@ This project also contains a modified version of the "Script" to make IntelliSen
 2. Unzip the Script.zip
 
 > [!NOTE]
-> This will only works if your IDE supports JavaScript IntelliSense.
+> This will only work if your IDE supports JavaScript IntelliSense.
 
 ## Development
 ### Installation
